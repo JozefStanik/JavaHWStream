@@ -18,7 +18,8 @@ public class MainClass {
 		b.add(new Book("Druhe vydanie", 50));
 		b.add(new Book("Tretie vydanie", 34));
 		
-		b.stream().filter(A->A.getPrice()<100).map(A->A.getName()).sorted().forEach(A->System.out.println(A));
+		//b.stream().filter(A->A.getPrice()<100).map(A->A.getName()).sorted().forEach(A->System.out.println(A));
+		System.out.println(b.stream().filter(A->A.getName().length()<5).map(A->A.getName()).count());
 	}
 
 }
